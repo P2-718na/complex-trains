@@ -1,0 +1,18 @@
+{
+  "name": "complex-networks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "node-fetch": "^2.7.0",
+    "node-html-parser": "^6.1.12",
+    "puppeteer": "^22.4.0",
+    "puppeteer-core": "^22.4.0"
+  }
+}
