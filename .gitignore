@@ -7,6 +7,8 @@ build/*
 datasets/*
 data/trains
 data/trainline/stations
+data/trainline/cities
+data/trainline/errors.txt
 
 !*/.gitkeep
 
