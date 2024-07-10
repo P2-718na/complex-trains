@@ -3,7 +3,6 @@ const { createWriteStream } = require("fs")
 
 const { batchedPromiseAll } = require('batched-promise-all')
 const { ensureDirSync, readdirSync, readFileSync, writeJsonSync, appendFileSync, removeSync } = require("fs-extra")
-const {remove} = require("fs-extra/lib/remove");
 
 removeSync("../data/trainline/cities")
 removeSync("../data/trainline/errors.txt")
