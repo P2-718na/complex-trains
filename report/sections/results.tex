@@ -1,0 +1,22 @@
+\section{Conclusions and future works}
+
+\subsection{Conclusions}
+In  this paper, we have shown how the Trainline network is scale-free. This fact alone dictates most of its robustness properties; mainly, we had predicted:
+\begin{itemize}
+    \item Very high tolerance to random node failures, and
+    \item Low tolerance to targeted attacks.
+\end{itemize}
+The theoretical results matched perfectly the numerical simulations on the real-world data. We can summarise them with the following points.
+\begin{itemize}
+    \item The Trainline network is scale-free with degree exponent $\gamma=2.23$. It exhibits ultra-small world properties.
+    \item If some number of randomly-chosen stations were to fail, the vast majority of all the other stations in the network would still be able to function normally.
+    \item In the (unlikely) scenario in which the highest-degree stations were targeted by an attack, we would see the network fragment only after the top $20\%$ of nodes is taken out. Some large communities would still be standing up until the top $30\%$ of nodes is taken out.
+    \item In the (more likely) scenario in which the highest-throughput links were targeted by an attack, the majority of the network would still be able to function normally, up until $80\%$ of the links are removed. Before that, only a few isolated stations would be cut off from the network.
+\end{itemize}
+My results differ from those obtained in \cite{gamma4}, but this might be due to the different nature of the networks considered.
+
+\subsection{Future works}
+This work highlighted some strengths and weaknesses of the Trainline network. While this network may be correlated with the physical train track network, in reality it is of a very different nature. The \emph{failing} of a node (or edge) in this network does not imply that the respective station has been shut off: it can also mean that one specific train company has decided to disable one of its routes due to economical reasons.
+This robustness study is useful per se, but it might also be interesting to study the robustness properties of the \emph{physical} train tracks network, in which each link corresponds to some stretch of railroad. This network would allow multi-links and its properties could be different than those observed in this paper. This kind of study could help predict and prevent possible interruptions in the case of terrorist attacks or wars, for example.
+
+Another possible line of work could be an analysis of the discrepancies between the results from this paper and the ones from \cite{gamma4}. Even though the network appears scale-free in both studies, the results in \cite{gamma4} suggest that the actual passenger transport network may be less robust than what the result in the present work suggest (due to a higher value of $\gamma$). A thorough study would need to compare different strategies for aggregating train timetable data into a network in order to find out which is the one that is most representative of the real world. Such network would probably contain both time-dependent links and multi-links.

@@ -1,0 +1,88 @@
+ \documentclass[compsoc]{IEEEtran}
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[journal]{../sty/IEEEtran}
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+\usepackage{xr}
+\usepackage{cprotect} % include verb in c aption
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{url}
+\usepackage{cprotect}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{xfrac}
+\usepackage{spverbatim}
+\usepackage{csquotes}
+\usepackage[outputdir=../]{minted}
+\usepackage[a4paper, margin={2cm, 2.5cm}]{geometry}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=cyan
+    }
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}       % "top" strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}} % "bottom" strut
+\newcommand{\TBstrut}{\Tstrut\Bstrut} % top&bottom struts
+
+\newtheorem{defin}{Definition}
+\newenvironment{definition}
+  {\vspace{2pt}\par\noindent\begin{minipage}{.485\textwidth}\hrulefill\begin{defin}}
+  {\par\noindent\hrulefill\end{defin}\end{minipage}\vspace{1pt}}
+
+
+\begin{document}
+
+\title{Robustness of the European Train Network}
+
+\author{
+Matteo Bonacini% <-this % stops a space
+}
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}
+
+
+\onecolumn
+% make the title area
+\maketitle
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\input{sections/abstract}
+\tableofcontents
+\clearpage
+\raggedbottom
+
+\twocolumn
+
+\input{sections/introduction}
+\input{sections/data-acquisition}
+\input{sections/properties}
+\input{report/sections/communities}
+\input{sections/robustness}
+
+\input{report/sections/results}
+%\clearpage
+
+% \newpage 
+\bibliographystyle{unsrt} % We choose the "plain" reference style
+\bibliography{bibliography} % Entries are in the refs.bib file
+
+\onecolumn
+\clearpage
+\appendices
+\input{appendices/pictures}
+
+\end{document}
