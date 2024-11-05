@@ -5,6 +5,7 @@ const { batchedPromiseAll } = require('batched-promise-all')
 const { ensureDirSync, readdirSync, readFileSync, writeJsonSync, appendFileSync} = require("fs-extra")
 
 let cities = readdirSync("../data/trainline/cities")
+console.log(cities.sort())
 
 cities.forEach(async fileName => {
     const cityData = require(`../data/trainline/cities/${fileName}`)
@@ -31,6 +32,6 @@ cities.forEach(async fileName => {
 
         const dataToPrint = [originName, name,  (+result.groups.d || 0)*60*24 + (+result.groups.h || 0)*60 + (+result.groups.m || 0), numberOfTrains, originLatitude, originLongitude, latitude, longitude];
 
-        console.log(dataToPrint.join(", "))
+        //console.log(dataToPrint.join(", "))
     })
 })
