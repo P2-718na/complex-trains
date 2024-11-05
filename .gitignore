@@ -30,7 +30,8 @@ cmake-build-debug
 .env
 node_modules
 assets/*.bkp
-
+*._*
+.idea
 
 ### Latex
 docs/report/build
